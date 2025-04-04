@@ -105,7 +105,10 @@
         ]
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
     "symfony/security-bundle": {
         "version": "7.2",
         "recipe": {
@@ -119,6 +122,9 @@
             "config/routes/security.yaml"
         ]
     },
+<<<<<<< HEAD
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
+=======
 >>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
     "symfony/twig-bundle": {
         "version": "7.2",
@@ -130,8 +136,13 @@
         },
         "files": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             "./config/packages/twig.yaml",
             "./templates/base.html.twig"
+=======
+            "config/packages/twig.yaml",
+            "templates/base.html.twig"
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
 =======
             "config/packages/twig.yaml",
             "templates/base.html.twig"

@@ -20,6 +20,10 @@
         "symfony/framework-bundle": "7.2.*",
         "symfony/runtime": "7.2.*",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "symfony/security-bundle": "7.2.*",
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
 =======
         "symfony/security-bundle": "7.2.*",
 >>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621

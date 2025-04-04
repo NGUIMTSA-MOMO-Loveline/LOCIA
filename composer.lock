@@ -5,7 +5,11 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "2129a6c80fb3afa714908cbf2b58dfdb",
+=======
+    "content-hash": "a99f78fe32d7cbd938f51441e609d593",
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
 =======
     "content-hash": "a99f78fe32d7cbd938f51441e609d593",
 >>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
@@ -6895,6 +6899,7 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "name": "twig/extra-bundle",
             "version": "v3.20.0",
             "source": {
@@ -6969,6 +6974,8 @@
             "time": "2025-02-08T09:47:15+00:00"
         },
         {
+=======
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
 =======
 >>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
             "name": "twig/twig",

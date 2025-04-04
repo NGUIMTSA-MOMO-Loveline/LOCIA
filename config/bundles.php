@@ -7,7 +7,11 @@ return [
     Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
     Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
 <<<<<<< HEAD
+<<<<<<< HEAD
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
+=======
+    Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
 =======
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
 >>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
