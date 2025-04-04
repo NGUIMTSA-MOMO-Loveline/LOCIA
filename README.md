@@ -1,3 +1,3 @@
 # Nguimtsa Momo Loveline
-# Mazo Nyada Alicia
+# Mazo Nyanda Alicia
 # Ondoa Taku Emmanuel
