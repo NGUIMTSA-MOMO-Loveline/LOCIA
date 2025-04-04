@@ -3,17 +3,22 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use App\Repository\PostRepository;
 
 final class HomeController extends AbstractController
 {
+    
     #[Route('/home', name: 'app_home')]
-    public function index(): JsonResponse
+    public function index(PostRepository $postRepository): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/HomeController.php',
+        $posts = $postRepository->findAll();
+
+        
+        return $this->render('home/home.html.twig',[
+            'posts' => $posts,
+                                                                                                                                                                                                                                                                                    
         ]);
     }
 }

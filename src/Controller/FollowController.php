@@ -11,9 +11,8 @@ final class FollowController extends AbstractController
     #[Route('/follow', name: 'app_follow')]
     public function index(): JsonResponse
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/FollowController.php',
+        return $this->render('follow/follow.html.twig', [
+            'user' => $this->getUser()
         ]);
     }
 }
