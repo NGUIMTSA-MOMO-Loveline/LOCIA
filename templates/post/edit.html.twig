@@ -1,0 +1,15 @@
+{# templates/post/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier {{ post.title }}{% endblock %}
+
+{% block body %}
+    <h1>Modifier le post</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.content) }}
+        <button type="submit">Sauvegarder</button>
+    {{ form_end(form) }}
+{% endblock %}

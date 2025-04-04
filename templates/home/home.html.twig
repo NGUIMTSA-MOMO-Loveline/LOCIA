@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Clone</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Disposition globale */
+.page-layout {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+}
+
+/* Sidebar gauche */
+.sidebar {
+  width: 250px;
+  background-color: #4CAF50;
+  padding: 2rem 1rem;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  text-align: center;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenu principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Conteneur des posts */
+.posts-container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.post {
+  background: white;
+border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.post p {
+  margin: 1rem 0;
+}
+
+.post a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.post a:hover {
+  color: #388E3C;
+}
+
+/* Barre latérale droite */
+.navbar-right {
+  width: 250px;
+  padding: 20px;
+  position: sticky;
+  right: 0;
+  top: 0;
+height: 100vh;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-right h4 {
+  color: #4CAF50;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.user {
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  background: #E8F5E9;
+  border-radius: 5px;
+  margin: 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.user:hover {
+  background: #C8E6C9;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="page-layout">
+
+  <!-- Sidebar gauche -->
+  <nav class="sidebar">
+    <h2>👽Locia</h2>
+    <ul>
+      <li>🏠 Accueil</li>
+      <li>&#128269; Recherche</li>
+      <li>👤 Découvrir</li>
+      <li>👤 Reels</li>
+      <li>👤 Message</li>
+      <li>❤️ Notifications</li>
+      <li>📷 Créer</li>
+      <li>👤 Profil</li>
+      
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+    
+    <!-- Posts -->
+    <div class="posts-container">
+      {% if posts is not empty %}
+        {% for post in posts %}
+          <div class="post">
+            <img src="{{post.image}}" alt="Image">
+            <p>{{ post.description }}</p>
+            <a href="{{ path('post_like', {id: post.id}) }}">❤️</a>
+          </div>
+        {% endfor %}
+      {% else %}
+         
+      {% endif %}
+    </div>
+
+  </main>
+
+</div>
+   <!-- right navbar -->
+  <div class="navbar-right">
+    <h4>Suggestion followers</h4>
+            <div class="user">👤Trinity</div>
+            <div class="user">👤Urielle</div>
+            <div class="user">👤Angelis</div>
+            <div class="user">👤Emille</div>
+            <div class="user">👤Alicia</div>
+            <div class="user">👤Deo </div>
+        </div>
+
+</body>
+</html>

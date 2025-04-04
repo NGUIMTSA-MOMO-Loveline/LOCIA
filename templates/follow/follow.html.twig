@@ -1,0 +1,28 @@
+{# templates/follow/follow.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Suivre un utilisateur{% endblock %}
+
+{% block body %}
+    <h1>Suivre un utilisateur</h1>
+
+    <p>Vous suivez actuellement les utilisateurs suivants:</p>
+    <ul>
+        {% for user in app.user.following %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Liste des utilisateurs à suivre</h2>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.username }}
+                <form action="{{ path('app_follow_user', {'id': user.id}) }}" method="POST">
+                    <button type="submit">Suivre</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

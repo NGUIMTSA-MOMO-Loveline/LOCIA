@@ -1,0 +1,21 @@
+{# templates/post/success.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Post créé avec succès{% endblock %}
+
+{% block body %}
+    <h1>Félicitations !</h1>
+    <p>Le post a été créé avec succès !</p>
+
+    <h3>Détails du post :</h3>
+    <ul>
+        <li><strong>Titre :</strong> {{ post.title }}</li>
+        <li><strong>Description :</strong> {{ post.description }}</li>
+        <li><strong>Image :</strong> <img src="{{ asset(post.image) }}" alt="Image du post" style="width: 100px; height: auto;" /></li>
+    </ul>
+
+    <a href="{{ path('app_post_show', { 'id': post.id }) }}">Voir le post</a>
+    <br>
+    <a href="{{ path('app_post_new') }}">Créer un autre post</a>
+{% endblock %}

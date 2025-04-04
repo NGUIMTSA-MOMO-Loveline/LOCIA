@@ -104,6 +104,11 @@
             "config/routes.yaml"
         ]
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
     "symfony/security-bundle": {
         "version": "7.2",
         "recipe": {
@@ -117,6 +122,10 @@
             "config/routes/security.yaml"
         ]
     },
+<<<<<<< HEAD
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
+=======
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
     "symfony/twig-bundle": {
         "version": "7.2",
         "recipe": {
@@ -126,8 +135,18 @@
             "ref": "cab5fd2a13a45c266d45a7d9337e28dee6272877"
         },
         "files": [
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "./config/packages/twig.yaml",
+            "./templates/base.html.twig"
+=======
             "config/packages/twig.yaml",
             "templates/base.html.twig"
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
+=======
+            "config/packages/twig.yaml",
+            "templates/base.html.twig"
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
         ]
     },
     "symfony/validator": {
@@ -141,5 +160,8 @@
         "files": [
             "config/packages/validator.yaml"
         ]
+    },
+    "twig/extra-bundle": {
+        "version": "v3.20.0"
     }
 }

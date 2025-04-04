@@ -11,16 +11,27 @@
         "doctrine/doctrine-bundle": "^2.14",
         "doctrine/doctrine-migrations-bundle": "^3.4",
         "doctrine/orm": "^3.3",
+        "symfony/amphp-http-client-meta": "^2.0",
+        "symfony/asset": "7.2.*",
         "symfony/console": "7.2.*",
         "symfony/dotenv": "7.2.*",
         "symfony/flex": "^2",
         "symfony/form": "7.2.*",
         "symfony/framework-bundle": "7.2.*",
         "symfony/runtime": "7.2.*",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         "symfony/security-bundle": "7.2.*",
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
+=======
+        "symfony/security-bundle": "7.2.*",
+>>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
         "symfony/twig-bundle": "7.2.*",
         "symfony/validator": "7.2.*",
-        "symfony/yaml": "7.2.*"
+        "symfony/yaml": "7.2.*",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.62"
