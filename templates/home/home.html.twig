@@ -5,131 +5,142 @@
   <title>Instagram Clone</title>
   <style>
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: rgb(0, 0, 0);
-        color: #fff;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
 
-    .page-layout {
-        display: flex;
-        min-height: 100vh;
-    }
+/* Disposition globale */
+.page-layout {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+}
 
-    /* Sidebar gauche */
-    .sidebar {
-        width: 220px;
-        background-color: rgb(0, 0, 0);
-        border-right: 1px solid #444;
-        padding: 2rem 1rem;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
+/* Sidebar gauche */
+.sidebar {
+  width: 250px;
+  background-color: #4CAF50;
+  padding: 2rem 1rem;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
 
-    .sidebar h2 {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        font-weight: bold;
-        font-style: italic;
-    }
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-    }
+.sidebar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  text-align: center;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .sidebar li {
-        margin: 1rem 0;
-        font-size: 1.1rem;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
+.sidebar li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
 
-    .sidebar li:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 
-    /* Navbar droite */
-    .navbar-right {
-        width: 200px;
-        height: 100%;
-        position: fixed;
-        right: 0;
-        top: 0;
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        background: rgb(0, 0, 0);
-        border-left: 1px solid #444;
-    }
-    .navbar-right h4 {
-        text-align: center;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
+/* Contenu principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
 
-    .navbar-right .user {
-        padding: 10px;
-        text-align: center;
-        font-size: 18px;
-        border-bottom: 1px solid #444;
-        transition: background 0.3s;
-    }
+/* Conteneur des posts */
+.posts-container {
+  width: 700px;
+  margin: 0 auto;
+}
 
-    .navbar-right .user:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        cursor: pointer;
-    }
+.post {
+  background: white;
+border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    /* Contenu principal */
-    .main-content {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-    }
+.post img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-    /* Conteneur des posts */
-    .posts-container {
-        width: 600px;
-        margin-right: 20px;
-    }
+.post p {
+  margin: 1rem 0;
+}
 
-   .post {
-        background: #fafafa;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 20px;
-    }
+.post a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    .post img {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 10px;
-        max-height: 600px;
-        object-fit: cover;
-    }
+.post a:hover {
+  color: #388E3C;
+}
 
-    .post p {
-        color: #000;
-        margin: 1rem 0;
-    }
+/* Barre latérale droite */
+.navbar-right {
+  width: 250px;
+  padding: 20px;
+  position: sticky;
+  right: 0;
+  top: 0;
+height: 100vh;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
 
-    .post a {
-        text-decoration: none;
-        color: #e1306c;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
+.navbar-right h4 {
+  color: #4CAF50;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
 
-    .post a:hover {
-        color: #c1275b;
-    }
+.user {
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  background: #E8F5E9;
+  border-radius: 5px;
+  margin: 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.user:hover {
+  background: #C8E6C9;
+}
 </style>
+
 
 </head>
 <body>
@@ -138,13 +149,13 @@
 
   <!-- Sidebar gauche -->
   <nav class="sidebar">
-    <h2>Locia</h2>
+    <h2>👽Locia</h2>
     <ul>
       <li>🏠 Accueil</li>
       <li>&#128269; Recherche</li>
       <li>👤 Découvrir</li>
       <li>👤 Reels</li>
-      <li>👤 Messages</li
+      <li>👤 Messages</li>
       <li>❤️ Notifications</li>
       <li>📷 Créer</li>
       <li>👤 Profil</li>
@@ -162,7 +173,7 @@
           <div class="post">
             <img src="{{post.image}}" alt="Image">
             <p>{{ post.description }}</p>
-            <a href="{{ path('post_like', {id: post.id}) }}">❤️ Like</a>
+            <a href="{{ path('post_like', {id: post.id}) }}">❤️</a>
           </div>
         {% endfor %}
       {% else %}
@@ -179,8 +190,9 @@
             <div class="user">👤Trinity</div>
             <div class="user">👤Urielle</div>
             <div class="user">👤Angelis</div>
-            <div class="user">👤Emile Mvondo</div>
-            <div class="user">👤Michelle</div>
+            <div class="user">👤Emille</div>
+            <div class="user">👤Alicia</div>
+            <div class="user">👤Deo </div>
         </div>
 
 </body>

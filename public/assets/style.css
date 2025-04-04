@@ -1,0 +1,100 @@
+/* style.css - Design Instagram */
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.profile-details {
+    margin-left: 15px;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.profile-buttons button {
+    flex: 1;
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.stories {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.stories .story {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.stories .story img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+}
+
+.navbar a {
+    color: white;
+    font-size: 20px;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 15px;
+}
+
+.posts img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,4 @@
+<h1>Profil de {{ user.username }}</h1>
+{% for post in user.posts %}
+    <img src="{{ asset(post.image) }}" alt="Image">
+{% endfor %} 
