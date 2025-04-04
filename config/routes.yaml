@@ -3,3 +3,12 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+post_index:
+    path: /post
+    controller: App\Controller\PostController::index
+post_show:
+    path: /post/{id}
+    controller: App\Controller\PostController::show    
+app_post_like:
+    path: /post/{id}/like
+    controller: App\Controller\LikeController::like

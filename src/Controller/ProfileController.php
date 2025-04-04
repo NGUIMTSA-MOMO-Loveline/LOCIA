@@ -1,19 +1,23 @@
 <?php
-
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 final class ProfileController extends AbstractController
 {
     #[Route('/profile', name: 'app_profile')]
-    public function index(): JsonResponse
+    public function index(): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ProfileController.php',
+        $user = $this->getUser();
+
+        if (!$user) {
+            return $this->redirectToRoute('app_login');
+        }
+
+        return $this->render('profile/index.html.twig', [
+            'user' => $user
         ]);
     }
 }

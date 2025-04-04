@@ -3,17 +3,23 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 final class LikeController extends AbstractController
 {
     #[Route('/like', name: 'app_like')]
-    public function index(): JsonResponse
+    public function index(): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/LikeController.php',
+        $user = $this->getUser();
+
+        if (!$user) {
+            return $this->redirectToRoute('app_login');
+        }
+
+        return $this->render('like/like.html.twig', [
+            'user' => $user
         ]);
     }
 }
+
