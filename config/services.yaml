@@ -3,16 +3,25 @@
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+# config/services.yaml
 parameters:
 
 services:
-    # default configuration for services in *this* file
-    _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    # Configuration du PasswordHasher
+    Symfony\Component\Security\Core\PasswordHasher\PasswordHasherInterface: '@security.password_hasher'
 
-    # makes classes in src/ available to be used as services
-    # this creates a service per class whose id is the fully-qualified class name
+    # Définition d'un service avec des arguments injectés
+    App\Controller\RegistrationController:
+        arguments:
+            $entityManager: '@doctrine.orm.entity_manager'
+            $passwordHasher: '@Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface'
+
+    # Configuration par défaut pour l'autowiring et autoconfiguration
+    _defaults:
+        autowire: true      # Injection automatique des dépendances
+        autoconfigure: true # Enregistre automatiquement les services comme commandes, événements, etc.
+
+    # Déclaration des services pour les classes dans le répertoire 'src/'
     App\:
         resource: '../src/'
         exclude:
@@ -20,5 +29,9 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+# config/services.yaml
+
+   

@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Comment;
 use App\Entity\Post;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -9,18 +10,21 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PostType extends AbstractType
+class CommentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('image')
-            ->add('description')
-            ->add('createdAt', null, [
+            ->add('content')
+            ->add('CreatedAt', null, [
                 'widget' => 'single_text',
             ])
             ->add('user', EntityType::class, [
                 'class' => User::class,
+                'choice_label' => 'id',
+            ])
+            ->add('post', EntityType::class, [
+                'class' => Post::class,
                 'choice_label' => 'id',
             ])
         ;
@@ -29,7 +33,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Post::class,
+            'data_class' => Comment::class,
         ]);
     }
 }
