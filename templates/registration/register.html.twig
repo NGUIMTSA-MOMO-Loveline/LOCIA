@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<style>
+    h1 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 320px;
+        margin: 30px auto;
+        padding: 25px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    p {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+    <h1>Inscription</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.password) }}
+
+        <button type="submit">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+
+    <p>Vous avez déjà un compte ? <a href="{{ path('app_login') }}">Se connecter</a></p>
+{% endblock %}

@@ -1,0 +1,26 @@
+{# templates/comment/add.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un Commentaire{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un commentaire pour le post "{{ post.title }}"</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.content) }}
+        <button type="submit">Ajouter un commentaire</button>
+    {{ form_end(form) }}
+
+    <h2>Commentaires</h2>
+    <ul>
+        {% for comment in post.comments %}
+            <li>
+                <strong>{{ comment.user.username }}</strong>: {{ comment.content }} 
+                <em>le {{ comment.createdAt|date('d/m/Y H:i') }}</em>
+            </li>
+        {% else %}
+            <li>Aucun commentaire pour ce post.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
