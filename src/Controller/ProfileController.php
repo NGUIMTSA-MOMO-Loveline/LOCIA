@@ -7,18 +7,8 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ProfileController extends AbstractController
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    #[Route('/profile', name: 'post_like')]
-    public function index(): JsonResponse
-=======
     #[Route('/profile', name: 'app_profile')]
     public function index(): Response
->>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
-=======
-    #[Route('/profile', name: 'app_profile')]
-    public function index(): Response
->>>>>>> 44d4767d72e50ce63572a92b5bb323dcde3fc621
     {
         $user = $this->getUser();
 

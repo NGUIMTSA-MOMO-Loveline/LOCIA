@@ -17,7 +17,7 @@ final class LikeController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
 
-        return $this->render('like/like.html.twig', [
+        return $this->render('like/show.html.twig', [
             'user' => $user
         ]);
     }
